@@ -1,4 +1,4 @@
-public class Conversor {
+public class ConversorDivisas {
 	
 	private final double USDNIO = 36.58;
 	private final double EURNIO = 39.71;
