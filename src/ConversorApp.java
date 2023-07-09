@@ -29,9 +29,16 @@ public class ConversorApp {
 		}
 		// Preguntar al usuario si desea continuar realizando conversiones
 		int option = JOptionPane.showConfirmDialog(null, "¿Desea continuar?");
-		if (option == 0) {
+		switch (option) {
+		case 0:
 			// Si el usuario elige continuar, llamar recursivamente al metodo ConvertirDivisas
 			convertirDivisas();
+			break;
+		case 1:
+		case 2:
+			// Si el usuario elige no o cancelar, mostrar un cuadro de dialogo de programa terminado
+			JOptionPane.showMessageDialog(null, "Programa terminado");
+			break;
 		}
 	}
 
