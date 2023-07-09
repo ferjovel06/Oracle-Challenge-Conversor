@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class Pantallas {
 
-	public double ConvertirDivisas(String divisa, double monto, ConversorDivisas conversor) {
+	public double ConvertirDivisasPantallas(String divisa, double monto, ConversorDivisas conversor) {
 		double resultado = 0.0;
 		String mensaje = "";
 
@@ -38,6 +38,8 @@ public class Pantallas {
 			resultado = conversor.wonesACordobas(monto);
 			mensaje = "C$" + String.format("%.2f", resultado) + " cordobas.";
 		}
+		
+		// Mostrar el resultado en un cuadro de dialogo
 		JOptionPane.showMessageDialog(null, "Tienes " + mensaje);
 		return resultado;
 
