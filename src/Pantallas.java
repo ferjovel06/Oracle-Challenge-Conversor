@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class Pantallas {
 
-	public double ConvertirDivisasPantallas(String divisa, double monto, ConversorDivisas conversor) {
+	public double ConvertirDivisasPantallas(String divisa, double monto, ConversorDivisasLogica conversor) {
 		double resultado = 0.0;
 		String mensaje = "";
 

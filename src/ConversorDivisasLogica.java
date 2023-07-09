@@ -1,4 +1,4 @@
-public class ConversorDivisas {
+public class ConversorDivisasLogica {
 	
 	private final double USDNIO = 36.58; // Tasa de cambio dolar/cordoba
 	private final double EURNIO = 39.71; // Tasa de cambio euro/cordoba

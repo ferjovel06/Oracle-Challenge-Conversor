@@ -1,7 +1,7 @@
 import javax.swing.JOptionPane;
 
 public class ConversorApp {
-	ConversorDivisas conversorDivisas = new ConversorDivisas();
+	ConversorDivisasLogica conversorDivisas = new ConversorDivisasLogica();
 	Pantallas pantallas = new Pantallas();
 	
 	String[] divisaDestino = { "De Cordobas a Dolar", "De Cordobas a Euro", "De Cordobas a Libras",
