@@ -1,8 +1,11 @@
+package Principal;
 import javax.swing.JOptionPane;
+import ConversorDivisas.ConversorDivisasLogica;
+import ConversorTemperatura.ConversorTemperaturaLogica;
 
-public class Pantallas {
+public class OpcionesConversion {
 
-	public double ConvertirDivisasPantallas(String divisa, double monto, ConversorDivisasLogica conversor) {
+	public double convertirDivisasOpciones(String divisa, double monto, ConversorDivisasLogica conversor) {
 		double resultado = 0.0;
 		String mensaje = "";
 
@@ -43,6 +46,35 @@ public class Pantallas {
 		JOptionPane.showMessageDialog(null, "Tienes " + mensaje);
 		return resultado;
 
+	}
+	
+	public double convertirTemperaturaOpciones(String temperatura, double valor, ConversorTemperaturaLogica conversor) {
+		double resultado = 0.0;
+		String mensaje = "";
+
+		if (temperatura.equals("De Celsius a Fahrenheit")) {
+			resultado = conversor.celsiusAFahrenheit(valor);
+			mensaje = valor + "°C son equivalentes a " + String.format("%.2f", resultado) + " °F.";
+		} else if (temperatura.equals("De Fahrenheit a Celsius")) {
+			resultado = conversor.fahrenheitACelsius(valor);
+			mensaje = valor + "°F son equivalentes a " + String.format("%.2f", resultado) + " °C.";
+		} else if (temperatura.equals("De Kelvin a Celsius")) {
+			resultado = conversor.kelvinACelsius(valor);
+			mensaje = valor + "°K son equivalentes a " + String.format("%.2f", resultado) + " °C.";
+		} else if (temperatura.equals("De Celsius a Kelvin")) {
+			resultado = conversor.celsiusAKelvin(valor);
+			mensaje = valor + "°C son equivalentes a " + String.format("%.2f", resultado) + " °K.";
+		} else if (temperatura.equals("De Fahrenheit a Kelvin")) {
+			resultado = conversor.fahrenheitAKelvin(valor);
+			mensaje = valor + "°F son equivalentes a " + String.format("%.2f", resultado) + " °K.";
+		} else if (temperatura.equals("De Kelvin a Fahrenheit")) {
+			resultado = conversor.kelvinAFahrenheit(valor);
+			mensaje = valor + "°K son equivalentes a " + String.format("%.2f", resultado) + " °F.";
+		}
+		
+		// Mostrar el resultado en un cuadro de dialogo
+		JOptionPane.showMessageDialog(null, mensaje);
+		return resultado;
 	}
 
 }

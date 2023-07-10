@@ -1,8 +1,10 @@
+package ConversorDivisas;
 import javax.swing.JOptionPane;
+import Principal.OpcionesConversion;
 
-public class ConversorApp {
+public class ConversorDivisasApp {
 	ConversorDivisasLogica conversorDivisas = new ConversorDivisasLogica();
-	Pantallas pantallas = new Pantallas();
+	OpcionesConversion pantallas = new OpcionesConversion();
 	
 	String[] divisaDestino = { "De Cordobas a Dolar", "De Cordobas a Euro", "De Cordobas a Libras",
 			"De Cordobas a Yen", "De Cordobas a Won Coreano", "De Dolar a Cordobas", "De Euro a Cordobas",
@@ -11,7 +13,7 @@ public class ConversorApp {
 	public void convertirDivisas() {
 		// Solicitar la cantidad de dinero al usuario
 		String input = JOptionPane.showInputDialog(null, "Ingresa la cantidad de dinero que deseas cambiar:");
-		if (input.matches("[0-9]+")) {
+		if (input.matches("-?[0-9]+(\\.[0-9]+)?")) {
 			try {
 				// Convertir la cantidad ingresada a double
 				double monto = Double.parseDouble(input);
@@ -19,7 +21,7 @@ public class ConversorApp {
 				String divisa = (String) JOptionPane.showInputDialog(null, "Seleccione una opcion de conversion", "Menu",
 						JOptionPane.DEFAULT_OPTION, null, divisaDestino, divisaDestino[0]);
 				// Realizar la conversion de divisas y obtener el resultado
-				double resultado = pantallas.ConvertirDivisasPantallas(divisa, monto, conversorDivisas);
+				double resultado = pantallas.convertirDivisasOpciones(divisa, monto, conversorDivisas);
 			} catch (NumberFormatException e) {
 				e.printStackTrace();
 			}

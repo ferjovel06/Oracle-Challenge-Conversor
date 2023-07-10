@@ -1,9 +1,13 @@
+package Principal;
 import javax.swing.JOptionPane;
+import ConversorDivisas.ConversorDivisasApp;
+import ConversorTemperatura.ConversorTemperaturaApp;
 
 public class Main {
 
 	public static void main(String[] args) {
-		ConversorApp conversor = new ConversorApp();
+		ConversorDivisasApp conversorDivisas = new ConversorDivisasApp();
+		ConversorTemperaturaApp conversorTemperatura = new ConversorTemperaturaApp();
 
 		String[] tipoConversion = { "Conversor de Moneda", "Conversor de Temperatura" };
 
@@ -11,7 +15,9 @@ public class Main {
 				JOptionPane.DEFAULT_OPTION, null, tipoConversion, tipoConversion[0]);
 
 		if (resp.equals(tipoConversion[0])) {
-			conversor.convertirDivisas();
+			conversorDivisas.convertirDivisas();
+		} else if (resp.equals(tipoConversion[1])) {
+			conversorTemperatura.convertirTemperatura();
 		}
 
 	}
