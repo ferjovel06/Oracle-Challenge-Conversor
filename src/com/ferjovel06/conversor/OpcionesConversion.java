@@ -1,7 +1,5 @@
-package Principal;
+package com.ferjovel06.conversor;
 import javax.swing.JOptionPane;
-import ConversorDivisas.ConversorDivisasLogica;
-import ConversorTemperatura.ConversorTemperaturaLogica;
 
 public class OpcionesConversion {
 

@@ -1,4 +1,5 @@
-package ConversorDivisas;
+package com.ferjovel06.conversor;
+
 public class ConversorDivisasLogica {
 	
 	private final double USDNIO = 36.58; // Tasa de cambio dolar/cordoba

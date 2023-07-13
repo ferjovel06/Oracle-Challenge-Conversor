@@ -1,4 +1,4 @@
-package ConversorTemperatura;
+package com.ferjovel06.conversor;
 
 public class ConversorTemperaturaLogica {
 	
