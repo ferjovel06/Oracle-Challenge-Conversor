@@ -1,11 +1,26 @@
 package com.ferjovel06.conversor;
+
 import javax.swing.JOptionPane;
 
+/**
+ * 
+ * @author ferjovel
+ *
+ */
 public class OpcionesConversion {
 
+	private double resultado = 0.0;
+	private String mensaje = "";
+
+	/**
+	 * Convierte una cantidad de dinero entre diferentes divisas
+	 * 
+	 * @param divisa
+	 * @param monto
+	 * @param conversor
+	 * @return
+	 */
 	public double convertirDivisasOpciones(String divisa, double monto, ConversorDivisasLogica conversor) {
-		double resultado = 0.0;
-		String mensaje = "";
 
 		if (divisa.equals("De Cordobas a Dolar")) {
 			resultado = conversor.cordobasADolar(monto);
@@ -39,16 +54,22 @@ public class OpcionesConversion {
 			resultado = conversor.wonesACordobas(monto);
 			mensaje = "C$" + String.format("%.2f", resultado) + " cordobas.";
 		}
-		
+
 		// Mostrar el resultado en un cuadro de dialogo
 		JOptionPane.showMessageDialog(null, "Tienes " + mensaje);
 		return resultado;
 
 	}
-	
+
+	/**
+	 * Convierte una temperatura entre diferentes escalas
+	 * 
+	 * @param temperatura
+	 * @param valor
+	 * @param conversor
+	 * @return resultado
+	 */
 	public double convertirTemperaturaOpciones(String temperatura, double valor, ConversorTemperaturaLogica conversor) {
-		double resultado = 0.0;
-		String mensaje = "";
 
 		if (temperatura.equals("De Celsius a Fahrenheit")) {
 			resultado = conversor.celsiusAFahrenheit(valor);
@@ -69,7 +90,42 @@ public class OpcionesConversion {
 			resultado = conversor.kelvinAFahrenheit(valor);
 			mensaje = valor + "°K son equivalentes a " + String.format("%.2f", resultado) + " °F.";
 		}
-		
+
+		// Mostrar el resultado en un cuadro de dialogo
+		JOptionPane.showMessageDialog(null, mensaje);
+		return resultado;
+	}
+
+	/**
+	 * Convierte una medida de longitud entre diferentes unidades
+	 * 
+	 * @param unidadLongitud
+	 * @param valor
+	 * @param conversor
+	 * @return resultado
+	 */
+	public double convertirLongitudOpciones(String unidadLongitud, double valor, ConversorLongitudLogica conversor) {
+
+		if (unidadLongitud.equals("De Kilometros a Metros")) {
+			resultado = conversor.kilometroMetro(valor);
+			mensaje = valor + " kilometros son equivalentes a " + String.format("%.2f", resultado) + " metros.";
+		} else if (unidadLongitud.equals("De Metros a Centimetros")) {
+			resultado = conversor.metroCentimetro(valor);
+			mensaje = valor + " metros son equivalentes a " + String.format("%.2f", resultado) + " centimetros.";
+		} else if (unidadLongitud.equals("De Centimetros a Milimetros")) {
+			resultado = conversor.centimetroMilimetro(valor);
+			mensaje = valor + " centimetros son equivalentes a " + String.format("%.2f", resultado) + " milimetros.";
+		} else if (unidadLongitud.equals("De Milimetros a Centimetros")) {
+			resultado = conversor.milimetroCentimetro(valor);
+			mensaje = valor + " milimetros son equivalentes a " + String.format("%.2f", resultado) + " centimetros.";
+		} else if (unidadLongitud.equals("De Centimetros a Metros")) {
+			resultado = conversor.centimetroMetro(valor);
+			mensaje = valor + " centimetros son equivalentes a " + String.format("%.2f", resultado) + " metros.";
+		} else if (unidadLongitud.equals("De Metros a Kilometros")) {
+			resultado = conversor.metroKilometro(valor);
+			mensaje = valor + " metros son equivalentes a " + String.format("%.2f", resultado) + " kilometros.";
+		}
+
 		// Mostrar el resultado en un cuadro de dialogo
 		JOptionPane.showMessageDialog(null, mensaje);
 		return resultado;

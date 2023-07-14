@@ -7,7 +7,7 @@ public class Main {
 		
 		ConversorApp conversor = new ConversorApp();
 
-		String[] tipoConversion = { "Conversor de Moneda", "Conversor de Temperatura", "Conversor de Unidades de Medida" };
+		String[] tipoConversion = { "Conversor de Moneda", "Conversor de Temperatura", "Conversor de Unidades de Longitud" };
 		
 		Object resp = (String) JOptionPane.showInputDialog(null, "Seleccione una opcion de conversion", "Menu",
 				JOptionPane.DEFAULT_OPTION, null, tipoConversion, tipoConversion[0]);
