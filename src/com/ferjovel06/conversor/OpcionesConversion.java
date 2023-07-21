@@ -57,7 +57,6 @@ public class OpcionesConversion {
 		// Mostrar el resultado en un cuadro de dialogo
 		JOptionPane.showMessageDialog(null, "Tienes " + mensaje);
 		return resultado;
-
 	}
 
 	/**
@@ -109,11 +108,11 @@ public class OpcionesConversion {
 			resultado = conversor.convertir(valor, ConversorLogica.getKilometroMetro(), '*');
 			mensaje = valor + " kilometros son equivalentes a " + String.format("%.2f", resultado) + " metros.";
 		} else if (unidadLongitud.equals("De Pulgadas a Metros")) {
-			resultado = conversor.convertir(valor, ConversorLogica.getPulgadaMetro(), '*');
-			mensaje = valor + " pulgadas son equivalentes a " + String.format("%.2f", resultado) + " milimetros.";
+			resultado = conversor.convertir(valor, ConversorLogica.getPulgadaMetro(), '/');
+			mensaje = valor + " pulgadas son equivalentes a " + String.format("%.2f", resultado) + " metros.";
 		} else if (unidadLongitud.equals("De Pies a Pulgadas")) {
 			resultado = conversor.convertir(valor, ConversorLogica.getPiePulgada(), '*');
-			mensaje = valor + " pulgadas son equivalentes a " + String.format("%.2f", resultado) + " milimetros.";
+			mensaje = valor + " pulgadas son equivalentes a " + String.format("%.2f", resultado) + " pies.";
 		} else if (unidadLongitud.equals("De Metros a Centimetros")) {
 			resultado = conversor.convertir(valor, ConversorLogica.getMetroCentimetro(), '*');
 			mensaje = valor + " metros son equivalentes a " + String.format("%.2f", resultado) + " centimetros.";
@@ -128,11 +127,11 @@ public class OpcionesConversion {
 			mensaje = valor + " centimetros son equivalentes a " + String.format("%.2f", resultado) + " metros.";
 		} else if (unidadLongitud.equals("De Pulgadas a Pies")) {
 			resultado = conversor.convertir(valor, ConversorLogica.getPiePulgada(), '/');
-			mensaje = valor + " pulgadas son equivalentes a " + String.format("%.2f", resultado) + " milimetros.";
-		} else if (unidadLongitud.equals("De Pulgadas a Metros")) {
+			mensaje = valor + " pulgadas son equivalentes a " + String.format("%.2f", resultado) + " pies.";
+		} else if (unidadLongitud.equals("De Metros a Pulgadas")) {
 			resultado = conversor.convertir(valor, ConversorLogica.getPulgadaMetro(), '/');
 			mensaje = valor + " pulgadas son equivalentes a " + String.format("%.2f", resultado) + " milimetros.";
-		} else if (unidadLongitud.equals("De Metros a Pulgadas")) {
+		} else if (unidadLongitud.equals("De Metros a Kilometros")) {
 			resultado = conversor.convertir(valor, ConversorLogica.getKilometroMetro(), '/');
 			mensaje = valor + " metros son equivalentes a " + String.format("%.2f", resultado) + " kilometros.";
 		}
