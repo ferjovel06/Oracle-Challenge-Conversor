@@ -9,8 +9,8 @@ _Conversor de divisas, temperaturas y medidas de longitud. Desarrollado en Java 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 ### Pre-requisitos 📋
-JDK (Java Development Kit) - [Descargar](https://www.oracle.com/java/technologies/javase-downloads.html)
-Eclipse IDE - [Descargar](https://www.eclipse.org/downloads/)
+* JDK (Java Development Kit) - [Descargar](https://www.oracle.com/java/technologies/javase-downloads.html)
+* Eclipse IDE - [Descargar](https://www.eclipse.org/downloads/)
 
 ### Ejecutar desde Eclipse 📦
 1. Clonar el repositorio
