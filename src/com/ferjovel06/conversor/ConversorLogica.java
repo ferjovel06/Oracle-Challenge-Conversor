@@ -4,7 +4,7 @@ package com.ferjovel06.conversor;
  * Clase que proporciona métodos para realizar conversiones de divisas, temperaturas y unidades de longitud.
  * Las conversiones de divisas se realizan utilizando tasas de cambio predefinidas,
  * mientras que las conversiones de temperatura y longitud utilizan fórmulas específicas.
- * @author ferjovel
+ * @author Fernanda Jovel
  *
  */
 public class ConversorLogica {
@@ -24,7 +24,7 @@ public class ConversorLogica {
 	private static final double KILOMETRO_METRO = 1000.0;
 	private static final double METRO_CENTIMETRO = 100.0;
 	private static final double CENTIMETRO_MILIMETRO = 10.0;
-	private static final double PULGADA_METRO = 3.281;
+	private static final double PULGADA_METRO = 39.37;
 	private static final double PIE_PULGADA = 12.0;
 
 	/**

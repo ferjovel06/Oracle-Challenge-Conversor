@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 /**
  * 
- * @author ferjovel
+ * @author Fernanda Jovel
  *
  */
 public class ConversorApp {
