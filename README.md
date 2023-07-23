@@ -96,8 +96,7 @@ Eclipse IDE - [Descargar](https://www.eclipse.org/downloads/)
 * [Swing](https://docs.oracle.com/javase/7/docs/api/javax/swing/package-summary.html) - Framework para interfaces graficas
 
 ## Autores ✒️
-* **María Fernanda Jovel** - _Autor principal_
-
+* **María Fernanda Jovel** - _Autor principal_ - [ferjovel06](https://github.com/ferjovel06)
 
 ## Licencia 📄
 Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalles
